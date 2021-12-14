@@ -1,0 +1,20 @@
+<launch>
+
+ <!-- joy buttons -->
+  <param name="joy_estop" value="0" type="int"/>
+  <param name="joy_pause" value="1" type="int"/>
+  <param name="joy_start" value="2" type="int"/>
+  <param name="joy_stop"  value="3" type="int"/>
+
+ <!-- topic name to subscribe for joy messages-->
+  <param name="joy_topic_name"  value="joy" type="string"/>
+
+ <!-- topic names to publish joy actions -->
+  <param name="joy_actions_estop" value="joy_actions/estop" type="string"/>
+  <param name="joy_actions_pause" value="joy_actions/pause" type="string"/>
+  <param name="joy_actions_start" value="joy_actions/start" type="string"/>
+  <param name="joy_actions_stop"  value="joy_actions/stop"  type="string"/>
+
+  <node pkg="joy_actions" type="joy_actions" name="joy_actions"/>
+
+</launch>
